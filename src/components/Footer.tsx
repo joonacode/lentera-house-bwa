@@ -4,10 +4,10 @@ import {
   GridItem,
   Heading,
   HStack,
-  Image,
   Text,
   useColorMode,
 } from '@chakra-ui/react'
+import Image from 'next/image'
 
 import React from 'react'
 import { dataTestimoni } from '../dataDummy'
@@ -48,8 +48,20 @@ const Footer = () => {
               of
             </Text>
             <HStack mt='20px' spacing='14px'>
-              <Image src='playstore.png' alt='hstack' w='100px' />
-              <Image src='appstore.png' alt='hstack' w='100px' />
+              <Image
+                src='/playstore.png'
+                layout='fixed'
+                alt='playstore'
+                width={100}
+                height={34}
+              />
+              <Image
+                src='/appstore.png'
+                layout='fixed'
+                alt='appstore'
+                width={100}
+                height={34}
+              />
             </HStack>
           </GridItem>
           {dataTestimoni.map((testimoni, i) => (

@@ -4,16 +4,16 @@ import {
   Flex,
   Heading,
   HStack,
-  Image,
+  // Image,
   Input,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react'
 import React from 'react'
+import Image from 'next/image'
 
 const Hero = () => {
   const bgInput = useColorModeValue('gray.50', 'gray.700')
-
   return (
     <Box>
       <Flex>
@@ -57,9 +57,9 @@ const Hero = () => {
               </Text>
               <Input
                 type='text'
-                placeholder='Sarch city'
+                placeholder='Bandung, Jawa Barat'
                 maxW='350px'
-                value='Bandung, Jawa Barat'
+                // value='Bandung, Jawa Barat'
                 bgColor={bgInput}
                 border='none'
                 rounded='none'
@@ -80,8 +80,13 @@ const Hero = () => {
             </Box>
           </Flex>
         </Box>
-        <Box w='50%' display={{ base: 'none', md: 'block' }}>
-          <Image src='banner.png' w='100%' alt='hero' />
+        <Box
+          w='50%'
+          position='relative'
+          display={{ base: 'none', md: 'block' }}
+          ml='20px'
+        >
+          <Image layout='fill' objectFit='cover' src='/banner.png' alt='hero' />
         </Box>
       </Flex>
     </Box>

@@ -1,5 +1,6 @@
-import { Box, GridItem, Image, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, GridItem, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
+import Image from 'next/image'
 
 interface Props {
   image: string
@@ -15,7 +16,15 @@ const TestimoniItem = ({ image, name, desc }: Props) => {
       display={{ base: 'none', md: 'block' }}
       position='relative'
     >
-      <Image src={image} alt='people1' rounded='34px' />
+      <Box
+        rounded='34px'
+        overflow='hidden'
+        width='90%'
+        height='260px'
+        position='relative'
+      >
+        <Image src={image} layout='fill' objectFit='cover' alt={name} />
+      </Box>
 
       <Box
         bgColor={bg}

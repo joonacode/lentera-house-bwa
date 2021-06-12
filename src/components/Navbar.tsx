@@ -5,7 +5,6 @@ import {
   Flex,
   HStack,
   IconButton,
-  Image,
   Menu,
   MenuButton,
   MenuItem,
@@ -15,13 +14,21 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import DarkmodeToggle from './DarkmodeToggle'
+import Image from 'next/image'
 
 const Navbar = () => {
   return (
     <Box py='20px'>
       <Container maxW='90%'>
         <Flex align='center'>
-          <Image src='logo.svg' borderRadius='full' w='50px' alt='logo' />
+          <Box borderRadius='full' position='relative' w='50px' h='50px'>
+            <Image
+              src='/logo.svg'
+              layout='fill'
+              objectFit='contain'
+              alt='logo'
+            />
+          </Box>
           <Spacer />
           <Box display={{ base: 'block', md: 'none' }}>
             <Menu>
