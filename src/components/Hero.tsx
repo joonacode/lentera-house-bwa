@@ -85,6 +85,7 @@ const Hero = () => {
           position='relative'
           display={{ base: 'none', md: 'block' }}
           ml='20px'
+          height='600px'
         >
           <Image layout='fill' objectFit='cover' src='/banner.png' alt='hero' />
         </Box>
